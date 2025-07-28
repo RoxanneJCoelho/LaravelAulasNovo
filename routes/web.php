@@ -21,6 +21,7 @@ Route::get('/modules/{name}', function($name){
 
 /* routes for Users */
 Route::get('/add-users', [UserController::class, 'createUser'])->name('users.add');
+Route::post('/store-user', [UserController::class, 'storeUser'])->name('users.store');
 Route::get('/users', [UserController::class, 'allUsers'])->name('users.all');
 Route::get('/view-user/{id}', [UserController::class, 'viewUser'])->name('user.show');
 Route::get('/delete-user/{id}', [UserController::class, 'deleteUser'])->name('users.delete');
